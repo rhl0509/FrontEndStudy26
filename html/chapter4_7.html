@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>블로그 with Aside</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 20px;
+ }
+
+ .container {
+ display: flex;
+ gap: 30px;
+ }
+
+ main {
+ flex: 2;
+ }
+
+ aside {
+ flex: 1;
+ background-color: #f8f9fa;
+ padding: 20px;
+ border-radius: 8px;
+ height: fit-content;
+ }
+
+ .widget {
+ margin-bottom: 30px;
+ }
+
+ .widget h3 {
+ color: #333;
+ border-bottom: 2px solid #007bff;
+ padding-bottom: 10px;
+ }
+
+ .tag {
+ display: inline-block;
+ background-color: #007bff;
+ color: white;
+ padding: 5px 10px;
+ margin: 3px;
+ border-radius: 15px;
+ font-size: 12px;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <main>
+<aside class="sidebar">
+ <!-- 프로필 위젯 -->
+ <div class="widget profile-widget">
+ <h3>‍ 작성자</h3>
+ <div class="profile">
+ <img src="https://via.placeholder.com/80x80" alt="프로필" class="profile-img">
+ <div class="profile-info">
+ <h4>김개발</h4>
+ <p>웹 개발을 사랑하는 개발자입니다.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- 최근 댓글 위젯 -->
+ <div class="widget">
+ <h3> 최근 댓글</h3>
+ <div class="comment">
+ <strong>박멘토:</strong> 좋은 글이네요!
+ <small>2시간 전</small>
+ </div>
+ <div class="comment">
+ <strong>이디자인:</strong> 도움이 많이 됐어요.
+ <small>5시간 전</small>
+ </div>
+ </div>
+
+ <!-- 광고 위젯 -->
+ <div class="widget ad-widget">
+ <h3> 광고</h3>
+ <div class="ad-banner">
+ <p>웹 개발 강의 50% 할인!</p>
+ <button>자세히 보기</button>
+ </div>
+ </div>
+</aside>
+
+<style>
+.profile {
+ display: flex;
+ align-items: center;
+ gap: 15px;
+}
+
+.profile-img {
+ border-radius: 50%;
+ width: 60px;
+ height: 60px;
+}
+
+.comment {
+ padding: 10px 0;
+ border-bottom: 1px solid #eee;
+}
+
+.comment small {
+ display: block;
+ color: #666;
+ margin-top: 5px;
+}
+
+.ad-widget {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ color: white;
+}
+
+.ad-banner {
+ text-align: center;
+}
+
+.ad-banner button {
+ background-color: white;
+ color: #667eea;
+ border: none;
+ padding: 8px 16px;
+ border-radius: 20px;
+ cursor: pointer;
+}
+</style>
+
+ </main>
+
+ <aside>
+ <div class="widget">
+ <h3> 인기 글</h3>
+ <ul>
+ <li><a href="#">CSS 기초 완전 정복</a></li>
+ <li><a href="#">JavaScript 시작하기</a></li>
+ <li><a href="#">반응형 웹 만들기</a></li>
+ </ul>
+ </div>
+
+ <div class="widget">
+ <h3> 태그</h3>
+ <span class="tag">HTML</span>
+ <span class="tag">CSS</span>
+ <span class="tag">JavaScript</span>
+ <span class="tag">웹개발</span>
+ </div>
+ </aside>
+ </div>
+</body>
+</html>
