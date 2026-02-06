@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>변수 실습</title>
+</head>
+<body>
+    <h1>연산자, 데이터를 가공</h1>
+<script>
+// 비교 연산자들
+let userAge = 20;
+let minAge = 18;
+
+console.log("성인인가요?", userAge >= minAge); // true
+console.log("미성년자인가요?", userAge < minAge); // false
+console.log("정확히 20세인가요?", userAge === 20); // true
+console.log("20세가 아닌가요?", userAge !== 20); // false
+
+// 문자열 비교
+let password = "1234";
+let inputPassword = "1234";
+console.log("비밀번호 일치:", password === inputPassword); // true
+
+// 실무 예제: 할인 조건 확인
+let totalPrice = 50000;
+let isMember = true;
+let freeShipping = totalPrice >= 30000;
+let memberDiscount = isMember && totalPrice >= 20000;
+
+console.log("무료배송 가능:", freeShipping); // true
+console.log("회원할인 적용:", memberDiscount); // true
+</script>
+
+
+</body>
+</html>
