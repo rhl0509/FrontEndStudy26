@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스플레이 유틸리티 실습</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!--
+주요 디스플레이 클래스들:
+- .d-none: 요소를 완전히 숨김 (무대에서 퇴장)
+- .d-block: 블록 레벨로 표시 (한 줄 전체 차지)
+- .d-inline: 인라인으로 표시 (텍스트처럼 나란히)
+- .d-flex: 플렉스박스로 표시 (유연한 배치)
+
+주요 위치 클래스들:
+- .position-static: 기본 위치 (자연스러운 흐름)
+- .position-relative: 원래 위치 기준으로 상대 배치
+- .position-absolute: 부모 요소 기준으로 절대 배치
+- .position-fixed: 화면 기준으로 고정 배치
+- .position-sticky: 스크롤에 따라 고정되는 배치
+-->
+<body>
+    <div class="container mt-4">
+        <h2>디스플레이 유틸리티 테스트</h2>
+
+        <!-- 기본 디스플레이 -->
+        <div class="bg-primary text-white p-2 d-block mb-2">블록 레벨 (d-block)</div>
+        <span class="bg-success text-white p-2 d-inline-block">인라인 블록 1</span>
+        <span class="bg-warning text-dark p-2 d-inline-block">인라인 블록 2</span>
+
+        <!-- 숨김/보임 -->
+        <div class="bg-info text-white p-2 d-none mb-2">숨겨진 요소 (d-none)</div>
+        <div class="bg-secondary text-white p-2 mb-2">보이는 요소</div>
+
+        <!-- 플렉스 디스플레이 -->
+        <div class="d-flex gap-2 mb-3">
+            <div class="bg-danger text-white p-2 flex-fill">플렉스 아이템 1</div>
+            <div class="bg-success text-white p-2 flex-fill">플렉스 아이템 2</div>
+            <div class="bg-primary text-white p-2 flex-fill">플렉스 아이템 3</div>
+        </div>
+    </div>
+</body>
+</html>

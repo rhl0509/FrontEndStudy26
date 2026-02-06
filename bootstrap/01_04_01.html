@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 색상 테스트</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!--
+Primary (주 색상): 브랜드의 메인 색상 (파란색)
+Secondary (보조 색상): 보조적인 색상 (회색)
+Success (성공): 성공 메시지용 (초록색)
+Danger (위험): 경고나 오류용 (빨간색)
+Warning (주의): 주의 메시지용 (노란색)
+Info (정보): 정보 전달용 (하늘색)
+Light (밝은): 밝은 배경용 (연한 회색)
+Dark (어두운): 어두운 배경용 (진한 회색)
+
+- 텍스트 색상: text-primary, text-success 등
+- 배경 색상: bg-primary, bg-success 등
+-->
+<body>
+    <div class="container mt-5">
+        <h1>부트스트랩 색상 시스템</h1>
+
+        <!-- 텍스트 색상 -->
+        <h2>텍스트 색상</h2>
+        <p class="text-primary">Primary 색상 텍스트</p>
+        <p class="text-success">Success 색상 텍스트</p>
+        <p class="text-danger">Danger 색상 텍스트</p>
+        <p class="text-warning">Warning 색상 텍스트</p>
+
+        <!-- 배경 색상 -->
+        <h2>배경 색상</h2>
+        <div class="bg-primary text-white p-3 mb-2">Primary 배경</div>
+        <div class="bg-success text-white p-3 mb-2">Success 배경</div>
+        <div class="bg-danger text-white p-3 mb-2">Danger 배경</div>
+        <div class="bg-warning text-dark p-3 mb-2">Warning 배경</div>
+    </div>
+</body>
+</html>

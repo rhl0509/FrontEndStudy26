@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 CSS 속성</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+    .color-picker {
+        margin: var(--spacing-medium);
+        padding: var(--spacing-small);
+    }
+
+    .theme-demo {
+        background-color: var(--brand-primary);
+        color: white;
+        padding: var(--spacing-large);
+        margin: var(--spacing-medium);
+        border-radius: var(--spacing-small);
+        transition: all 0.3s ease;
+    }
+</style>
+
+<div class="container">
+    <div class="color-picker">
+        <label for="colorPicker">브랜드 컬러 선택:</label>
+        <input type="color" id="colorPicker" value="#6f42c1">
+        <button onclick="changeTheme()" class="btn btn-primary ms-2">테마 적용</button>
+    </div>
+
+    <div class="theme-demo">
+        이 영역의 색상이 바뀝니다!
+    </div>
+</div>
+
+<script>
+function changeTheme() {
+    const colorPicker = document.getElementById('colorPicker');
+    const selectedColor = colorPicker.value;
+
+    // CSS 변수 값 변경
+    document.documentElement.style.setProperty('--brand-primary', selectedColor);
+
+    console.log('테마 색상이 변경되었습니다:', selectedColor);
+}
+</script>
+
+</body>
+</html>
